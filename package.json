@@ -1,0 +1,33 @@
+{
+  "name": "register-scanner",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "glogin": "clasp login",
+    "glogout": "clasp logout",
+    "gpull": "clasp pull",
+    "gpush": "npm run copy-files && clasp push",
+    "gcreate": "clasp create --title \"register-scanner\" --rootDir ./appscript",
+    "gstart": "clasp push --watch",
+    "copy-files": "copy .\\src\\Code.js .\\appscript\\ && copy .\\dist\\index.html .\\appscript"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "dayjs": "^1.11.9",
+    "element-plus": "^2.3.8",
+    "lodash": "^4.17.21",
+    "randomcolor": "^0.6.2",
+    "uuid": "^9.0.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.66",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5",
+    "vite-plugin-singlefile": "^0.13.5"
+  }
+}
