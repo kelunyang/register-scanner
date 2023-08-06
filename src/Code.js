@@ -10,6 +10,9 @@ function doGet(e) {
   htmlOutput.addMetaTag('viewport', 'width=device-width, initial-scale=1');
   return htmlOutput;
 }
+function getScriptURL() {
+  return ScriptApp.getService().getUrl();
+}
 function buildList() {
   let sheetListID = appProperties.getProperty("sheetListID");
   let spreadsheet = SpreadsheetApp.openById(sheetListID);

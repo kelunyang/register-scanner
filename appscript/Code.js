@@ -1,6 +1,3 @@
-/*
-2. MODE： debug, 寫過不能再寫, 直出, 根據狀態決定能不能再寫
-*/
 const _ = LodashGS.load();
 const appProperties = PropertiesService.getScriptProperties();
 
@@ -12,6 +9,9 @@ function doGet(e) {
   var htmlOutput = HtmlService.createHtmlOutput(html);
   htmlOutput.addMetaTag('viewport', 'width=device-width, initial-scale=1');
   return htmlOutput;
+}
+function getScriptURL() {
+  return ScriptApp.getService().getUrl();
 }
 function buildList() {
   let sheetListID = appProperties.getProperty("sheetListID");

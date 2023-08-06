@@ -25,3 +25,6 @@ dist-ssr
 
 #ignore complie directories
 dist/*
+public/
+public/*
+.clasp.json
